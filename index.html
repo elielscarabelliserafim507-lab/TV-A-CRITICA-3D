@@ -11,7 +11,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>TV A Crítica 3D</title>
-  <link rel="stylesheet" href="./styles.css?v=20260823-mobile1" />
+  <link rel="stylesheet" href="./styles.css?v=20260823-time1" />
 </head>
 <body>
   <div id="loading">Carregando TV A Crítica 3D...</div>
@@ -19,11 +19,13 @@
   <div id="hud">
     <div class="brand">TV A CRÍTICA 3D</div>
     <div id="location">Fachada</div>
+    <div id="timeHud"><span id="gameClock">--:--</span><span id="dayPeriod">DIA</span></div>
     <div class="help desktop-help">Clique para jogar • WASD para andar • Mouse para olhar • Shift corre • ESC libera o mouse</div>
     <div class="help mobile-help">Joystick para andar • Arraste do lado direito para olhar • CORRER aumenta a velocidade</div>
   </div>
 
   <div id="crosshair">+</div>
+  <div id="skyOverlay" aria-hidden="true"></div>
 
   <div id="startPanel">
     <h1>TV A Crítica 3D</h1>
@@ -41,5 +43,6 @@
 
   <canvas id="game"></canvas>
   <script type="module" src="./src/main-v4.js?v=20260823-mobile1"></script>
+  <script type="module" src="./src/time-cycle.js?v=20260823-time1"></script>
 </body>
 </html>
