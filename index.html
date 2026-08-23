@@ -1,1 +1,47 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Novo projeto</title></head><body></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#071b55" />
+  <meta name="description" content="TV A Crítica 3D - experiência virtual interativa" />
+  <title>TV A Crítica 3D</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="loading">
+    <div class="brand-mark"><span>●</span><b>acritica</b></div>
+    <div class="loader"></div>
+    <p>Construindo a emissora em 3D...</p>
+  </div>
+
+  <div id="hud">
+    <div class="topbar glass">
+      <div class="brand"><span class="live-dot"></span><strong>TV A CRÍTICA 3D</strong></div>
+      <div class="stats"><span id="clock">12:00</span><span id="fps">60 FPS</span></div>
+    </div>
+
+    <div class="controls glass">
+      <button id="btnHome" title="Voltar para a fachada">⌂</button>
+      <button id="btnDay" title="Alternar dia/noite">☀</button>
+      <button id="btnTour" title="Tour automático">▶</button>
+      <button id="btnQuality" title="Qualidade gráfica">HD</button>
+    </div>
+
+    <div class="hint glass">Arraste para olhar • Role para aproximar • WASD para caminhar</div>
+    <div id="programMenu" class="program-menu glass"></div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
