@@ -11,10 +11,20 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>TV A Crítica 3D</title>
-  <link rel="stylesheet" href="./styles.css?v=20260823-rebuild2" />
+  <link rel="stylesheet" href="./styles.css?v=20260823-menu1" />
 </head>
 <body>
   <div id="loading">Carregando TV A Crítica 3D...</div>
+
+  <section id="programMenu" aria-label="Escolha como entrar na TV A Crítica">
+    <div class="station-header">
+      <div class="station-logo-placeholder">LOGO DA EMISSORA</div>
+      <h1 id="programMenuTitle">TV A CRÍTICA</h1>
+      <p>Escolha um programa para entrar pela recepção e seguir até o estúdio escolhido, ou explore a emissora inteira.</p>
+      <button id="fullStationButton" type="button">EXPLORAR A EMISSORA COMPLETA</button>
+    </div>
+    <div id="programGrid" class="program-grid"></div>
+  </section>
 
   <div id="hud">
     <div class="brand">TV A CRÍTICA 3D</div>
@@ -27,22 +37,21 @@
   <div id="crosshair">+</div>
   <div id="skyOverlay" aria-hidden="true"></div>
 
-  <div id="startPanel">
+  <div id="startPanel" style="display:none">
     <h1>TV A Crítica 3D</h1>
     <p>Explore a emissora em primeira pessoa.</p>
-    <button id="startButton">ENTRAR NA EMISSORA</button>
+    <button id="startButton">ENTRAR</button>
   </div>
 
   <div id="mobileControls" aria-hidden="true">
-    <div id="joystick" class="touch-control">
-      <div id="joystickKnob"></div>
-    </div>
+    <div id="joystick" class="touch-control"><div id="joystickKnob"></div></div>
     <div id="lookPad" class="touch-control" aria-label="Arraste para olhar"></div>
     <button id="runButton" class="touch-control">CORRER</button>
   </div>
 
   <canvas id="game"></canvas>
-  <script type="module" src="./src/main-v4.js?v=20260823-rebuild2"></script>
-  <script type="module" src="./src/time-cycle.js?v=20260823-rebuild2"></script>
+  <script type="module" src="./src/main-v4.js?v=20260823-menu1"></script>
+  <script type="module" src="./src/time-cycle.js?v=20260823-menu1"></script>
+  <script type="module" src="./src/program-menu.js?v=20260823-menu1"></script>
 </body>
 </html>
