@@ -2,28 +2,44 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
   <meta name="theme-color" content="#06173d" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>TV A Crítica 3D</title>
-  <link rel="stylesheet" href="./styles.css?v=20260822-2020" />
+  <link rel="stylesheet" href="./styles.css?v=20260823-mobile1" />
 </head>
 <body>
   <div id="loading">Carregando TV A Crítica 3D...</div>
+
   <div id="hud">
     <div class="brand">TV A CRÍTICA 3D</div>
     <div id="location">Fachada</div>
-    <div class="help">Clique para jogar • WASD para andar • Mouse para olhar • Shift corre • ESC libera o mouse</div>
+    <div class="help desktop-help">Clique para jogar • WASD para andar • Mouse para olhar • Shift corre • ESC libera o mouse</div>
+    <div class="help mobile-help">Joystick para andar • Arraste do lado direito para olhar • CORRER aumenta a velocidade</div>
   </div>
+
   <div id="crosshair">+</div>
+
   <div id="startPanel">
     <h1>TV A Crítica 3D</h1>
     <p>Explore a emissora em primeira pessoa.</p>
     <button id="startButton">ENTRAR NA EMISSORA</button>
   </div>
+
+  <div id="mobileControls" aria-hidden="true">
+    <div id="joystick" class="touch-control">
+      <div id="joystickKnob"></div>
+    </div>
+    <div id="lookPad" class="touch-control" aria-label="Arraste para olhar"></div>
+    <button id="runButton" class="touch-control">CORRER</button>
+  </div>
+
   <canvas id="game"></canvas>
-  <script type="module" src="./src/main-v3.js?v=20260822-2020"></script>
+  <script type="module" src="./src/main-v4.js?v=20260823-mobile1"></script>
 </body>
 </html>
